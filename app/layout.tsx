@@ -1,5 +1,6 @@
 import Footer from "@/components/layout/Footer";
 import Header from "@/components/layout/Header";
+import { Suspense } from "react";
 import { CartProvider } from "@/context/CartContext";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
@@ -28,7 +29,9 @@ export default function RootLayout({
         className={`${inter.className}  antialiased flex flex-col min-h-screen`}
       >
         <CartProvider>
-          <Header />
+          <Suspense fallback={null}>
+            <Header />
+          </Suspense>
           <main className="flex-grow">{children}</main>
           <Footer />
         </CartProvider>
