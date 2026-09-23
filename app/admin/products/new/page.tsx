@@ -2,8 +2,9 @@
 import ProductForm from "@/components/admin/ProductForm";
 import { redirect } from "next/navigation";
 
-export const dynamic = "force-dynamic";
+
 export const metadata = { title: "Nouveau produit", robots: { index: false, follow: false } };
+export const dynamic = "force-dynamic";
 
 export default async function NewProductPage() {
   if (!(await isAdmin())) redirect("/admin/login");

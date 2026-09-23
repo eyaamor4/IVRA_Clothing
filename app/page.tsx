@@ -1,4 +1,5 @@
 import ProductList from "@/components/home/ProductList";
+import { Suspense } from "react";
 
 export default function Home() {
   return (
@@ -12,7 +13,9 @@ export default function Home() {
           and performance in every pair.
         </p>
       </div>
-      <ProductList />
+            <Suspense fallback={<div className="text-center py-16 text-muted-foreground">Chargement...</div>}>
+        <ProductList />
+      </Suspense>
     </div>
   );
 }
