@@ -6,7 +6,7 @@ export interface Product {
   price: number;
   image: string;
   description: string | null;
-  stock: Record<Size, number>;
+  stock: Record<string, number>;
   created_at?: string;
 }
 
