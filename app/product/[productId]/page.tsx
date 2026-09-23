@@ -7,7 +7,7 @@ import RelatedProducts from "@/components/product/RelatedProducts";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { useCart } from "@/context/CartContext";
-import { Product } from "@/types/product";
+import type { Product } from "@/types/product";
 import { cn } from "@/lib/utils";
 import {
   Check,
